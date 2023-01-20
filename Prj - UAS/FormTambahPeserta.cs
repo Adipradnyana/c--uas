@@ -53,7 +53,7 @@ namespace Prj___UAS
             }
             else
             {
-                urutan = "P0001";
+                urutan = "P00001";
             }
             rdr.Close();
             txtKodeTim.Text = urutan;
@@ -90,6 +90,7 @@ namespace Prj___UAS
 
         private void FormTambahPeserta_Load(object sender, EventArgs e)
         {
+            txtKodeTim.Enabled = false;
             TampilData();
             Bersihkan();
             AutoKode();

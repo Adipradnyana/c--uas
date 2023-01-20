@@ -46,17 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormLihat Peserta.cs">
+    <Compile Include="FormLihatHasil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLihat Peserta.Designer.cs">
-      <DependentUpon>FormLihat Peserta.cs</DependentUpon>
+    <Compile Include="FormLihatHasil.Designer.cs">
+      <DependentUpon>FormLihatHasil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLihatPeserta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLihatPeserta.Designer.cs">
+      <DependentUpon>FormLihatPeserta.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLihatEvent.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLihatEvent.Designer.cs">
       <DependentUpon>FormLihatEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLihatJadwal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLihatJadwal.Designer.cs">
+      <DependentUpon>FormLihatJadwal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLihatSkor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLihatSkor.Designer.cs">
+      <DependentUpon>FormLihatSkor.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenu.cs">
       <SubType>Form</SubType>
@@ -69,6 +87,12 @@
     </Compile>
     <Compile Include="FormTambahEvent.Designer.cs">
       <DependentUpon>FormTambahEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTambahHasil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTambahHasil.Designer.cs">
+      <DependentUpon>FormTambahHasil.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTambahJadwal.cs">
       <SubType>Form</SubType>
@@ -85,17 +109,29 @@
     <Compile Include="Koneksi.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormLihat Peserta.resx">
-      <DependentUpon>FormLihat Peserta.cs</DependentUpon>
+    <EmbeddedResource Include="FormLihatHasil.resx">
+      <DependentUpon>FormLihatHasil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLihatPeserta.resx">
+      <DependentUpon>FormLihatPeserta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLihatEvent.resx">
       <DependentUpon>FormLihatEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLihatJadwal.resx">
+      <DependentUpon>FormLihatJadwal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLihatSkor.resx">
+      <DependentUpon>FormLihatSkor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenu.resx">
       <DependentUpon>FormMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahEvent.resx">
       <DependentUpon>FormTambahEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTambahHasil.resx">
+      <DependentUpon>FormTambahHasil.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTambahJadwal.resx">
       <DependentUpon>FormTambahJadwal.cs</DependentUpon>

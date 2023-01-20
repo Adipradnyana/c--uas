@@ -13,4 +13,8 @@ E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormTambahEvent.res
 E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormTambahPeserta.resources
 E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormLihatEvent.resources
 E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormTambahJadwal.resources
-E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormLihat_Peserta.resources
+E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormLihatJadwal.resources
+E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormTambahHasil.resources
+E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormLihatPeserta.resources
+E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormLihatHasil.resources
+E:\codingan iseng\C#\Sol - UAS\Prj - UAS\obj\Debug\Prj___UAS.FormLihatSkor.resources

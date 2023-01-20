@@ -11,12 +11,12 @@ using System.Data.SqlClient;
 
 namespace Prj___UAS
 {
-    public partial class FormLihat_Peserta : Form
+    public partial class FormLihatPeserta : Form
     {
         private SqlCommand cmd;
         private DataSet ds;
         private SqlDataAdapter da;
-        public FormLihat_Peserta()
+        public FormLihatPeserta()
         {
             InitializeComponent();
         }

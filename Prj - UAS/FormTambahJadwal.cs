@@ -119,7 +119,7 @@ namespace Prj___UAS
             try
             {
                 conn.Open();
-                cmd = new SqlCommand("SELECT * FROM Jadwal", conn);
+                cmd = new SqlCommand("SELECT Kode_Jadwal,Kode_Event,Nama_Event,Tanggal,Tim_A.Kode_TimA,Tim_A.Kode_Tim,P1.Nama_Tim As Nama_TimA , Tim_B.Kode_TimB,Tim_B.Kode_Tim as Kode_Tim2 , P2.Nama_Tim as Nama_TimB FROM Jadwal INNER JOIN Tim_A ON Tim_A.Kode_TimA = Jadwal.Kode_TimA\r\nINNER JOIN Tim_B ON Tim_B.Kode_TimB = Jadwal.Kode_TimB\r\nINNER JOIN Peserta AS P1 ON P1.Kode_Tim = Tim_A.Kode_Tim \r\nINNER JOIN Peserta As P2 ON P2.Kode_Tim = Tim_B.Kode_Tim", conn);
                 ds = new DataSet();
                 da = new SqlDataAdapter(cmd);
                 da.Fill(ds, "event_olahraga");
@@ -138,56 +138,8 @@ namespace Prj___UAS
                 conn.Close();
             }
         }
-        void TampilDataTimA()
-        {
-            SqlConnection conn = Konn.GetConn();
-            try
-            {
-                conn.Open();
-                cmd = new SqlCommand("SELECT Kode_TimA,Tim_A.Kode_Tim,Peserta.Nama_Tim FROM Tim_A,Peserta WHERE Tim_A.Kode_Tim = Peserta.Kode_Tim", conn);
-                ds = new DataSet();
-                da = new SqlDataAdapter(cmd);
-                da.Fill(ds, "event_olahraga");
-                dataGridView2.DataSource = ds;
-                dataGridView2.DataMember = "event_olahraga";
-                dataGridView2.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
-            }
-            catch (Exception G)
-            {
-                MessageBox.Show(G.ToString());
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-        void TampilDataTimB()
-        {
-            SqlConnection conn = Konn.GetConn();
-            try
-            {
-                conn.Open();
-                cmd = new SqlCommand("SELECT Kode_TimB,Tim_B.Kode_Tim,Peserta.Nama_Tim FROM Tim_B,Peserta WHERE Tim_B.Kode_Tim = Peserta.Kode_Tim", conn);
-                ds = new DataSet();
-                da = new SqlDataAdapter(cmd);
-                da.Fill(ds, "event_olahraga");
-                dataGridView3.DataSource = ds;
-                dataGridView3.DataMember = "event_olahraga";
-                dataGridView3.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-
-            }
-            catch (Exception G)
-            {
-                MessageBox.Show(G.ToString());
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
+        
+        
 
         private void btLihatEvent_Click(object sender, EventArgs e)
         {
@@ -200,7 +152,7 @@ namespace Prj___UAS
 
         private void bttambahTim1_Click(object sender, EventArgs e)
         {
-            FormLihat_Peserta frmsearch = new FormLihat_Peserta();
+            FormLihatPeserta frmsearch = new FormLihatPeserta();
             frmsearch.ShowDialog();
 
             if(txtKodeTimA.Text == "" || txtKodePesertaA.Text == "" || txtNamaTimA.Text == "")
@@ -216,7 +168,7 @@ namespace Prj___UAS
 
         private void btTambahTim2_Click(object sender, EventArgs e)
         {
-            FormLihat_Peserta frmsearch = new FormLihat_Peserta();
+            FormLihatPeserta frmsearch = new FormLihatPeserta();
             frmsearch.ShowDialog();
 
             if (txtKodeTimB.Text == "" || txtKodePesertaB.Text == "" || txtNamaTimB.Text == "")
@@ -232,9 +184,10 @@ namespace Prj___UAS
 
         private void FormTambahJadwal_Load(object sender, EventArgs e)
         {
+            txtKodeJadwal.Enabled = false;
+            txtKodeTimA.Enabled = false;
+            txtKodeTimB.Enabled = false;
             TampilDataJadwal();
-            TampilDataTimA();
-            TampilDataTimB();
             Bersihkan();
             AutoKodeJadwal();
             AutoKodeTimA();
@@ -278,8 +231,6 @@ namespace Prj___UAS
                     MessageBox.Show("Data Berhasil Diupdate");
                     Bersihkan();
                     TampilDataJadwal();
-                    TampilDataTimA();
-                    TampilDataTimB();
                     AutoKodeJadwal();
                     AutoKodeTimA();
                     AutoKodeTimB();
@@ -308,8 +259,6 @@ namespace Prj___UAS
                     MessageBox.Show("Data Berhasil DiTambahkan");
                     Bersihkan();
                     TampilDataJadwal();
-                    TampilDataTimA();
-                    TampilDataTimB();
                     AutoKodeJadwal();
                     AutoKodeTimA();
                     AutoKodeTimB();
@@ -327,20 +276,10 @@ namespace Prj___UAS
             dTPJadwal.Value = Convert.ToDateTime(row.Cells["Tanggal"].Value.ToString());
             txtKodeTimA.Text = row.Cells["Kode_TimA"].Value.ToString();
             txtKodeTimB.Text = row.Cells["Kode_TimB"].Value.ToString();
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = this.dataGridView2.Rows[e.RowIndex];
             txtKodePesertaA.Text = row.Cells["Kode_Tim"].Value.ToString();
-            txtNamaTimA.Text = row.Cells["Nama_Tim"].Value.ToString();
-        }
-
-        private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            DataGridViewRow row = this.dataGridView3.Rows[e.RowIndex];
-            txtKodePesertaB.Text = row.Cells["Kode_Tim"].Value.ToString();
-            txtNamaTimB.Text = row.Cells["Nama_Tim"].Value.ToString();
+            txtNamaTimA.Text = row.Cells["Nama_TimA"].Value.ToString();
+            txtKodePesertaB.Text = row.Cells["Kode_Tim2"].Value.ToString();
+            txtNamaTimB.Text = row.Cells["Nama_TimB"].Value.ToString();
         }
     }
 }

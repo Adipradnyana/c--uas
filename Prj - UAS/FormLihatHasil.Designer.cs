@@ -1,6 +1,6 @@
 ﻿namespace Prj___UAS
 {
-    partial class FormLihat_Peserta
+    partial class FormLihatHasil
     {
         /// <summary>
         /// Required designer variable.
@@ -35,21 +35,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(29, 124);
+            this.dataGridView1.Location = new System.Drawing.Point(27, 81);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(734, 293);
+            this.dataGridView1.Size = new System.Drawing.Size(1310, 340);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // FormLihat_Peserta
+            // FormLihatHasil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1370, 450);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "FormLihat_Peserta";
-            this.Text = "FormLihat_Peserta";
-            this.Load += new System.EventHandler(this.FormLihat_Peserta_Load);
+            this.Name = "FormLihatHasil";
+            this.Text = "FormLihatHasil";
+            this.Load += new System.EventHandler(this.FormLihatHasil_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

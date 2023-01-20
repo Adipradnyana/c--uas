@@ -30,7 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btInputHasil = new System.Windows.Forms.Button();
-            this.btInputSkor = new System.Windows.Forms.Button();
             this.btInputJadwal = new System.Windows.Forms.Button();
             this.btInputPeserta = new System.Windows.Forms.Button();
             this.btInputEvent = new System.Windows.Forms.Button();
@@ -47,7 +46,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btInputHasil);
-            this.groupBox1.Controls.Add(this.btInputSkor);
             this.groupBox1.Controls.Add(this.btInputJadwal);
             this.groupBox1.Controls.Add(this.btInputPeserta);
             this.groupBox1.Controls.Add(this.btInputEvent);
@@ -60,50 +58,43 @@
             // 
             // btInputHasil
             // 
-            this.btInputHasil.Location = new System.Drawing.Point(73, 95);
+            this.btInputHasil.Location = new System.Drawing.Point(125, 83);
             this.btInputHasil.Name = "btInputHasil";
             this.btInputHasil.Size = new System.Drawing.Size(94, 28);
             this.btInputHasil.TabIndex = 4;
             this.btInputHasil.Text = "Hasil";
             this.btInputHasil.UseVisualStyleBackColor = true;
-            this.btInputHasil.Click += new System.EventHandler(this.button5_Click);
-            // 
-            // btInputSkor
-            // 
-            this.btInputSkor.Location = new System.Drawing.Point(125, 64);
-            this.btInputSkor.Name = "btInputSkor";
-            this.btInputSkor.Size = new System.Drawing.Size(92, 25);
-            this.btInputSkor.TabIndex = 3;
-            this.btInputSkor.Text = "Skor";
-            this.btInputSkor.UseVisualStyleBackColor = true;
+            this.btInputHasil.Click += new System.EventHandler(this.btInputHasil_Click);
             // 
             // btInputJadwal
             // 
-            this.btInputJadwal.Location = new System.Drawing.Point(23, 64);
+            this.btInputJadwal.Location = new System.Drawing.Point(23, 85);
             this.btInputJadwal.Name = "btInputJadwal";
             this.btInputJadwal.Size = new System.Drawing.Size(96, 25);
             this.btInputJadwal.TabIndex = 2;
             this.btInputJadwal.Text = "Jadwal";
             this.btInputJadwal.UseVisualStyleBackColor = true;
-            this.btInputJadwal.Click += new System.EventHandler(this.button3_Click);
+            this.btInputJadwal.Click += new System.EventHandler(this.btInputJadwal_Click);
             // 
             // btInputPeserta
             // 
-            this.btInputPeserta.Location = new System.Drawing.Point(125, 33);
+            this.btInputPeserta.Location = new System.Drawing.Point(125, 40);
             this.btInputPeserta.Name = "btInputPeserta";
             this.btInputPeserta.Size = new System.Drawing.Size(92, 25);
             this.btInputPeserta.TabIndex = 1;
             this.btInputPeserta.Text = "Peserta";
             this.btInputPeserta.UseVisualStyleBackColor = true;
+            this.btInputPeserta.Click += new System.EventHandler(this.btInputPeserta_Click);
             // 
             // btInputEvent
             // 
-            this.btInputEvent.Location = new System.Drawing.Point(23, 33);
+            this.btInputEvent.Location = new System.Drawing.Point(23, 40);
             this.btInputEvent.Name = "btInputEvent";
             this.btInputEvent.Size = new System.Drawing.Size(96, 25);
             this.btInputEvent.TabIndex = 0;
             this.btInputEvent.Text = "Event";
             this.btInputEvent.UseVisualStyleBackColor = true;
+            this.btInputEvent.Click += new System.EventHandler(this.btInputEvent_Click);
             // 
             // groupBox2
             // 
@@ -127,6 +118,7 @@
             this.btLihatHasil.TabIndex = 4;
             this.btLihatHasil.Text = "Hasil";
             this.btLihatHasil.UseVisualStyleBackColor = true;
+            this.btLihatHasil.Click += new System.EventHandler(this.btLihatHasil_Click);
             // 
             // btLihatSkor
             // 
@@ -136,6 +128,7 @@
             this.btLihatSkor.TabIndex = 3;
             this.btLihatSkor.Text = "Skor";
             this.btLihatSkor.UseVisualStyleBackColor = true;
+            this.btLihatSkor.Click += new System.EventHandler(this.btLihatSkor_Click);
             // 
             // btLihatJadwal
             // 
@@ -145,6 +138,7 @@
             this.btLihatJadwal.TabIndex = 2;
             this.btLihatJadwal.Text = "Jadwal";
             this.btLihatJadwal.UseVisualStyleBackColor = true;
+            this.btLihatJadwal.Click += new System.EventHandler(this.btLihatJadwal_Click);
             // 
             // btLihatPeserta
             // 
@@ -154,6 +148,7 @@
             this.btLihatPeserta.TabIndex = 1;
             this.btLihatPeserta.Text = "Peserta";
             this.btLihatPeserta.UseVisualStyleBackColor = true;
+            this.btLihatPeserta.Click += new System.EventHandler(this.btLihatPeserta_Click);
             // 
             // btLihatEvent
             // 
@@ -163,6 +158,7 @@
             this.btLihatEvent.TabIndex = 0;
             this.btLihatEvent.Text = "Event";
             this.btLihatEvent.UseVisualStyleBackColor = true;
+            this.btLihatEvent.Click += new System.EventHandler(this.btLihatEvent_Click);
             // 
             // FormMenu
             // 
@@ -183,7 +179,6 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btInputHasil;
-        private System.Windows.Forms.Button btInputSkor;
         private System.Windows.Forms.Button btInputJadwal;
         private System.Windows.Forms.Button btInputPeserta;
         private System.Windows.Forms.Button btInputEvent;

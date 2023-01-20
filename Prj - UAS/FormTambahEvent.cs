@@ -87,6 +87,7 @@ namespace Prj___UAS
 
         private void FormTambahEvent_Load(object sender, EventArgs e)
         {
+            txtKodeEvent.Enabled = true;
             TampilData();
             Bersihkan();
             AutoKode();
@@ -110,7 +111,7 @@ namespace Prj___UAS
                 rdr = cmd.ExecuteReader();
                 if (rdr.HasRows)
                 {
-                    ssql = "UPDATE Event SET Nama_Event ='" + txtNamaEvent.Text + "',Penyelengara ='" + txtPenyelenggara.Text + "',Lokasi='" + txtLokasi.Text + "'WHERE Kode_Event ='" + txtKodeEvent.Text + "'";
+                    ssql = "UPDATE Event SET Nama_Event ='" + txtNamaEvent.Text + "',Penyelenggara ='" + txtPenyelenggara.Text + "',Lokasi='" + txtLokasi.Text + "'WHERE Kode_Event ='" + txtKodeEvent.Text + "'";
                     rdr.Close();
                     cmd = new SqlCommand(ssql, conn);
                     cmd.ExecuteNonQuery();
@@ -141,6 +142,7 @@ namespace Prj___UAS
             txtNamaEvent.Text = row.Cells["Nama_Event"].Value.ToString();
             txtPenyelenggara.Text = row.Cells["Penyelenggara"].Value.ToString();
             txtLokasi.Text = row.Cells["Lokasi"].Value.ToString();
+            
         }
     }
 }   
